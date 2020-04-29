@@ -26,13 +26,14 @@ namespace WishList
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }else
+            }
+            else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseRouting();
-            app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
+            app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
         }
     }
 }
